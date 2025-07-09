@@ -159,7 +159,7 @@ class CircuitEnv(object):
       save_partial_placement: bool = False,
       mixed_size_dp_at_infeasible: bool = True,
       dp_target_density: float = 0.425,
-      dp_regioning: bool | None = None,
+      dp_regioning: Optional[bool] = None,
   ):
     """Creates a CircuitEnv.
 
@@ -337,7 +337,7 @@ class CircuitEnv(object):
   def create_dreamplace(
       self,
       dp_target_density: float,
-      regioning: bool | None = None,
+      regioning: Optional[bool] = None,
   ) -> dreamplace_core.SoftMacroPlacer:
     """Creates the SoftMacroPlacer."""
     canvas_width, canvas_height = self._plc.get_canvas_width_height()
